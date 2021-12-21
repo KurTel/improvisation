@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+deploy/
+
+backup/
+
+*.sublime-project
+*.sublime-workspace
+
+# idea files and folders
+*.iml
+.idea/

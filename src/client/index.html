@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+    <div class="ui">
+        <div>Минут на слово:</div>
+        <input type="number" id="inputTime" min="0" required="required" pattern="[09]{1,20}">
+        <div class="buttons">
+            <button id="startButton" class="button-start">START</button>
+            <button id="stopButton" class="button-stop">STOP</button>
+        </div>
+        <div class="time-box" id="timeBox">0:0</div>
+    </div>
+    <div class="word-box" id="wordBox">&#160;</div>
+</div>
+</body>
+</html>

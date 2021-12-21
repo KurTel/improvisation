@@ -1,0 +1,129 @@
+@import "../fonts/OpenSans/stylesheet.css";
+
+// ** МЕДИА ЗАПРОСЫ ** //
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right, blue, pink);
+    font-family: "Open Sans";
+    min-height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.main{
+    text-align: center;
+    width: 100%;
+}
+
+.ui{
+    padding-top: 60px;
+    font-size: 40px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    @include for-phone-only{
+        width: 100%;
+    }
+}
+
+input{
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.buttons{
+    margin-top: 30px;
+    width: 100%;
+}
+
+button{
+    display: inline-block;
+    width: 40%;
+    margin-left: 1%;
+    margin-right: 1%;
+    align-items: center;
+    appearance: none;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 60px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 25px;
+
+    &:hover{
+        box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, 1) 0 7px 13px -3px, rgba(0, 0, 0, .6) 0 -3px 0 inset;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: #3c4fe0 0 3px 7px inset;
+        transform: translateY(2px);
+    }
+}
+
+.button-start{
+    background-image: radial-gradient(100% 100% at 100% 0, #44FF3A 0, #56BF50 100%);
+}
+
+.button-stop{
+    background-image: radial-gradient(100% 100% at 100% 0, #FF443A 0, #BF5650 100%);
+}
+
+.time-box{
+    margin-top: 40px;
+    font-size: 150px;
+}
+
+.word-box{
+    font-size: 10vw;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font-family: "Open Sans";
+
+    @include for-phone-only{
+        margin-top: 20px;
+        font-size: 12vw;
+        word-wrap: break-word;
+        letter-spacing: normal;
+    }
+}
